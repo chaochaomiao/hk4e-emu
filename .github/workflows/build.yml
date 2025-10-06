@@ -19,9 +19,9 @@ jobs:
       GOARCH: ${{ matrix.goarch }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v4
         with:
           go-version: 1.19.x
           cache: true
@@ -31,7 +31,7 @@ jobs:
           cp config.example.yaml config.yaml
           zip -r hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip hk4e-emu config.yaml data LICENSE README.md
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip
           path: hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip
@@ -49,9 +49,9 @@ jobs:
       GOARCH: ${{ matrix.goarch }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v4
         with:
           go-version: 1.19.x
           cache: true
@@ -61,7 +61,7 @@ jobs:
           cp config.example.yaml config.yaml
           zip -r hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip hk4e-emu config.yaml data LICENSE README.md
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip
           path: hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip
@@ -79,9 +79,9 @@ jobs:
       GOARCH: ${{ matrix.goarch }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v4
         with:
           go-version: 1.19.x
           cache: true
@@ -91,7 +91,7 @@ jobs:
           cp config.example.yaml config.yaml
           zip -r hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip hk4e-emu.exe config.yaml data LICENSE README.md
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip
           path: hke4-emu_${{ matrix.goos }}_${{ matrix.goarch }}.zip
